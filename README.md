@@ -27,9 +27,9 @@ Service
 
 ## Tech Stack
 
-| Tool/Tech      | Purpose                                    |
-|----------------|--------------------------------------------|
-| **Minikube**   | Local Kubernetes cluster for testing        |
+| Tool/Tech      | Purpose                                     |
+|----------------|---------------------------------------------|
+| **Minikube**   | Local Kubernetes cluster                    |
 | **Docker**     | Containerization of services                |
 | **Kustomize**  | Base and overlay Kubernetes configuration   |
 | **kubectl**    | Kubernetes CLI for managing resources       |
@@ -38,7 +38,7 @@ Service
 
 ## Step-by-Step Setup (Minikube):
 
-### Prerequisites
+### Prerequisites:
 Make sure you have the following installed:
 - [Docker]
 - [Kubectl]
@@ -46,11 +46,13 @@ Make sure you have the following installed:
 
 ### Verify installations:
 docker --version
+
 kubectl version --client
+
 minikube version
 
 
-### Commands Used
+### Commands Used:
 minikube start --driver=docker
 ![alt text](image.png)
 
@@ -74,18 +76,19 @@ kubectl exec -it mongo-55f94c9bbc-l9cr2 -- mongosh
 
 ---
 
-# Docker and Containers
+# Docker and Containers:
 1) Docker images
 ![alt text](image-12.png)
 
 2) Docker containers
 ![alt text](image-13.png)
 
-# commands inside mongodb
+# Commands inside mongodb:
 show dbs
+
 use devopsdb
 
-# Environment Variables
+# Environment Variables:
 Variable	Description
 NODE_ENV	development (default)
 MONGO_URI	Connection string for MongoDB
@@ -93,11 +96,11 @@ MONGO_URI	Connection string for MongoDB
 Note: This setup is for local development only.
 
 
-# Repository Structure
+# Repository Structure:
 ![alt text](image-14.png)
 
 
-# Screenshots of Application UI
+# Screenshots of Application UI:
 1) Profile Tab
 ![alt text](image-7.png)
 
