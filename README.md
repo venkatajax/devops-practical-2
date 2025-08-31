@@ -8,7 +8,7 @@ The setup includes:
 - Steps to test and access the application locally through Minikube
 - Instructions to verify data in MongoDB after submitting entries through the UI
 
----
+
 
 ## Architecture Overview
 NodeJS App <--> MongoDB
@@ -25,11 +25,9 @@ Service
 (Cluster IP/NodePort)
 
 
----
-
 ## Tech Stack
 
-| Tool/Tech       | Purpose                                    |
+| Tool/Tech      | Purpose                                    |
 |----------------|--------------------------------------------|
 | **Minikube**   | Local Kubernetes cluster for testing        |
 | **Docker**     | Containerization of services                |
@@ -37,24 +35,8 @@ Service
 | **kubectl**    | Kubernetes CLI for managing resources       |
 | **MongoDB**    | Database backend                            |
 
----
 
-## Repository Structure
-├── app
-├── Dockerfile # Docker image for Node.js application
-├── docker-compose.yml # Optional for local Docker-only testing
-├── kustomize/
-│ ├── base/
-│ │ ├── deployment.yaml
-│ │ ├── service.yaml # Node.js app Service (NodePort)
-│ │ └── kustomization.yaml
-│ └── overlays/
-└── README.md
-
-
----
-
-## Step-by-Step Setup (Minikube)
+## Step-by-Step Setup (Minikube):
 
 ### Prerequisites
 Make sure you have the following installed:
@@ -62,37 +44,32 @@ Make sure you have the following installed:
 - [Kubectl]
 - [Minikube]
 
----
-
-Verify installations:
-```bash
+### Verify installations:
 docker --version
 kubectl version --client
 minikube version
 
----
 
 ### Commands Used
-
-`minikube start --driver=docker`
+minikube start --driver=docker
 ![alt text](image.png)
 
-`kubectl get nodes`
+kubectl get nodes
 ![alt text](image-1.png)
 
-`kubectl apply -k kustomize/base`
+kubectl apply -k kustomize/base
 ![alt text](image-2.png)
 
-`kubectl get pods`
+kubectl get pods
 ![alt text](image-3.png)
 
-`kubectl get svc`
+kubectl get svc
 ![alt text](image-4.png)
 
-`minikube service node-app --url`
+minikube service node-app --url
 ![alt text](image-5.png)
 
-`kubectl exec -it mongo-55f94c9bbc-l9cr2 -- mongosh`
+kubectl exec -it mongo-55f94c9bbc-l9cr2 -- mongosh
 ![alt text](image-6.png)
 
 ---
@@ -104,13 +81,9 @@ minikube version
 2) Docker containers
 ![alt text](image-13.png)
 
----
-
 # commands inside mongodb
-`show dbs`
-`use devopsdb`
-
----
+show dbs
+use devopsdb
 
 # Environment Variables
 Variable	Description
@@ -119,9 +92,12 @@ MONGO_URI	Connection string for MongoDB
 
 Note: This setup is for local development only.
 
----
 
-# Screenshots of Application UI:
+# Repository Structure
+![alt text](image-14.png)
+
+
+# Screenshots of Application UI
 1) Profile Tab
 ![alt text](image-7.png)
 
@@ -135,10 +111,7 @@ Note: This setup is for local development only.
 
 ![alt text](image-11.png)
 
----
-
-Author: Venkatesh Tuniki 
+# Author: Venkatesh Tuniki 
 
 "I have setup the Kubernetes cluster using **Minikube**. I attempted to work using EKS - An aws managed kubernetes cluster, however I'm experincing some issues with account registration step with AWS personal account as my previous one was closed. Hence deployed the app and mongo containers using Minikube."
 
----
