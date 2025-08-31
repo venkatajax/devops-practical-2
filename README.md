@@ -10,7 +10,7 @@ The setup includes:
 
 
 
-## Architecture Overview
+## Architecture Overview:
 NodeJS App <--> MongoDB
 │ ▲
 │ │
@@ -25,15 +25,15 @@ Service
 (Cluster IP/NodePort)
 
 
-## Tech Stack
+## Tech Stack:
 
 | Tool/Tech      | Purpose                                     |
 |----------------|---------------------------------------------|
-| **Minikube**   | Local Kubernetes cluster                    |
-| **Docker**     | Containerization of services                |
-| **Kustomize**  | Base and overlay Kubernetes configuration   |
-| **kubectl**    | Kubernetes CLI for managing resources       |
-| **MongoDB**    | Database backend                            |
+| **Minikube**   | Local Kubernetes Cluster                    |
+| **Docker**     | Containerization of Services                |
+| **Kustomize**  | Base and Overlay Kubernetes Configuration   |
+| **kubectl**    | Kubernetes CLI for Managing Resources       |
+| **MongoDB**    | Database Backend                            |
 
 
 ## Step-by-Step Setup (Minikube):
@@ -76,14 +76,14 @@ kubectl exec -it mongo-55f94c9bbc-l9cr2 -- mongosh
 
 ---
 
-# Docker and Containers:
+# Docker Images and Containers:
 1) Docker images
 ![alt text](image-12.png)
 
 2) Docker containers
 ![alt text](image-13.png)
 
-# Commands inside mongodb:
+# Commands Inside Mongodb:
 show dbs
 
 use devopsdb
@@ -117,4 +117,3 @@ Note: This setup is for local development only.
 # Author: Venkatesh Tuniki 
 
 "I have setup the Kubernetes cluster using **Minikube**. I attempted to work using EKS - An aws managed kubernetes cluster, however I'm experincing some issues with account registration step with AWS personal account as my previous one was closed. Hence deployed the app and mongo containers using Minikube."
-
